@@ -1,0 +1,21 @@
+// @import url(font)
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+a {
+    color: inherit;
+}

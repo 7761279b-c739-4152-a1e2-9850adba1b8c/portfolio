@@ -1,0 +1,44 @@
+nav {
+    background-color: $color-background;
+    border-right: rems(2px) solid $color-borders;
+    flex: 0 0 rems(150px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: static;
+
+    div {
+        padding: rems(12px) 0;
+        text-align: center;
+        font-size: rems(16px);
+    }
+
+    a {
+        text-decoration: none;
+        text-underline-offset: rems(4px);
+        cursor: pointer;
+    }
+    div > a {
+        &:hover {
+            text-decoration: underline solid $color-borders rems(1.5px);
+        }
+    }
+
+    h1 {
+        margin: 0;
+        color: $color-borders;
+        font-size: rems(64px);
+        height: 100px;
+        border-bottom: rems(2px) solid $color-borders;
+        
+        a {
+            padding: rems(8px);
+        }
+    }
+
+    .contact-highlight {
+        border-top: rems(2px) solid $color-borders;
+        border-bottom: rems(2px) solid $color-borders;
+        font-weight: 600;
+    }
+}

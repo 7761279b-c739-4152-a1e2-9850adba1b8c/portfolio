@@ -1,0 +1,76 @@
+/* line 3, ../../portfolio/website/scss/_layout.scss */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 10, ../../portfolio/website/scss/_layout.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 14, ../../portfolio/website/scss/_layout.scss */
+.main {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* line 19, ../../portfolio/website/scss/_layout.scss */
+a {
+  color: inherit;
+}
+
+/* line 1, ../../portfolio/website/scss/_sidemenu.scss */
+nav {
+  background-color: #fff;
+  border-right: 0.125rem solid #7cc;
+  flex: 0 0 9.375rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+
+/* line 10, ../../portfolio/website/scss/_sidemenu.scss */
+nav div {
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* line 16, ../../portfolio/website/scss/_sidemenu.scss */
+nav a {
+  text-decoration: none;
+  text-underline-offset: 0.25rem;
+  cursor: pointer;
+}
+
+/* line 22, ../../portfolio/website/scss/_sidemenu.scss */
+nav div > a:hover {
+  text-decoration: underline solid #7cc 0.09375rem;
+}
+
+/* line 27, ../../portfolio/website/scss/_sidemenu.scss */
+nav h1 {
+  margin: 0;
+  color: #7cc;
+  font-size: 4rem;
+  height: 100px;
+  border-bottom: 0.125rem solid #7cc;
+}
+
+/* line 34, ../../portfolio/website/scss/_sidemenu.scss */
+nav h1 a {
+  padding: 0.5rem;
+}
+
+/* line 39, ../../portfolio/website/scss/_sidemenu.scss */
+nav .contact-highlight {
+  border-top: 0.125rem solid #7cc;
+  border-bottom: 0.125rem solid #7cc;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=styles.css.map */
