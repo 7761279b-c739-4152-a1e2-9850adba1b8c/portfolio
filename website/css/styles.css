@@ -13,8 +13,8 @@ body {
 
 /* line 14, ../../portfolio/website/scss/_layout.scss */
 .main {
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0;
+  width: 100%;
 }
 
 /* line 19, ../../portfolio/website/scss/_layout.scss */
@@ -36,29 +36,30 @@ nav {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: static;
+  position: sticky;
+  top: 0;
 }
 
-/* line 10, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 11, ../../portfolio/website/scss/_sidemenu.scss */
 nav div {
   padding: 0.75rem 0;
   text-align: center;
   font-size: 1rem;
 }
 
-/* line 16, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 17, ../../portfolio/website/scss/_sidemenu.scss */
 nav a {
   text-decoration: none;
   text-underline-offset: 0.25rem;
   cursor: pointer;
 }
 
-/* line 22, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 23, ../../portfolio/website/scss/_sidemenu.scss */
 nav div > a:hover {
   text-decoration: underline solid #7cc 0.09375rem;
 }
 
-/* line 27, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 28, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 {
   margin: 0;
   color: #7cc;
@@ -67,12 +68,12 @@ nav h1 {
   border-bottom: 0.125rem solid #7cc;
 }
 
-/* line 34, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 35, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 a {
   padding: 0.5rem;
 }
 
-/* line 39, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 40, ../../portfolio/website/scss/_sidemenu.scss */
 nav .contact-highlight {
   border-top: 0.125rem solid #7cc;
   border-bottom: 0.125rem solid #7cc;
@@ -119,6 +120,126 @@ header h1 {
 /* line 16, ../../portfolio/website/scss/_projects.scss */
 .projects .project p {
   margin: 0;
+}
+
+/* line 1, ../../portfolio/website/scss/_contact.scss */
+.contact {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  /* line 1, ../../portfolio/website/scss/_contact.scss */
+  .contact {
+    display: flex;
+  }
+}
+
+/* line 7, ../../portfolio/website/scss/_contact.scss */
+.contact > div {
+  margin-right: 1.875rem;
+  flex-basis: 150px;
+  min-width: 150px;
+  flex-grow: 1;
+}
+
+/* line 12, ../../portfolio/website/scss/_contact.scss */
+.contact > div h2 {
+  margin: 0;
+}
+
+/* line 16, ../../portfolio/website/scss/_contact.scss */
+.contact form {
+  flex-basis: 300px;
+  flex-grow: 2;
+}
+
+/* line 19, ../../portfolio/website/scss/_contact.scss */
+.contact form .hidden {
+  display: none;
+}
+
+/* line 22, ../../portfolio/website/scss/_contact.scss */
+.contact form textarea {
+  font-family: inherit;
+}
+
+/* line 25, ../../portfolio/website/scss/_contact.scss */
+.contact form input, .contact form textarea {
+  background-color: #ddd;
+  border: 2px solid #ddd;
+}
+
+/* line 27, ../../portfolio/website/scss/_contact.scss */
+.contact form input::placeholder, .contact form textarea::placeholder {
+  color: #999;
+}
+
+/* line 32, ../../portfolio/website/scss/_contact.scss */
+.contact form input, .contact form textarea, .contact form button {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: 0;
+}
+
+/* line 37, ../../portfolio/website/scss/_contact.scss */
+.contact form input:focus, .contact form textarea:focus {
+  border-color: #7cc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(119, 204, 204, 0.6);
+}
+
+/* line 41, ../../portfolio/website/scss/_contact.scss */
+.contact form button:focus, .contact form button:hover {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* line 44, ../../portfolio/website/scss/_contact.scss */
+.contact form button {
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  width: 128px;
+}
+
+/* line 51, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid {
+  display: grid;
+  gap: 0.875rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'first-name' 'last-name' 'email' 'subject' 'message';
+  margin-bottom: 0.875rem;
+}
+
+@media (min-width: 576px) {
+  /* line 51, ../../portfolio/website/scss/_contact.scss */
+  .contact form .form-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'first-name last-name' 'email email' 'subject subject' 'message message';
+  }
+}
+
+/* line 62, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid #first-name {
+  grid-area: first-name;
+}
+
+/* line 65, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid #last-name {
+  grid-area: last-name;
+}
+
+/* line 68, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid #email {
+  grid-area: email;
+}
+
+/* line 71, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid #subject {
+  grid-area: subject;
+}
+
+/* line 74, ../../portfolio/website/scss/_contact.scss */
+.contact form .form-grid #message {
+  grid-area: message;
 }
 
 /*# sourceMappingURL=styles.css.map */

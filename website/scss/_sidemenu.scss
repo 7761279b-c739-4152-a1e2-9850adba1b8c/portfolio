@@ -5,7 +5,8 @@ nav {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    position: static;
+    position: sticky;
+    top: 0;
 
     div {
         padding: rems(12px) 0;

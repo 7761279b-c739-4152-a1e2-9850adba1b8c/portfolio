@@ -1,0 +1,79 @@
+.contact {
+    margin-top: rems(32px);
+    @include mq(medium) {
+        display: flex;
+    }
+
+    & > div {
+        margin-right: rems(30px);
+        flex-basis: 150px;
+        min-width: 150px;
+        flex-grow: 1;
+        h2 {
+            margin: 0;
+        }
+    }
+    form {
+        flex-basis: 300px;
+        flex-grow: 2;
+        .hidden {
+            display: none;
+        }
+        textarea {
+            font-family: inherit;
+        }
+        input, textarea {
+            background-color: $color-input-background;
+            &::placeholder {
+                color: $color-input-placeholder;
+            }
+            border: 2px solid $color-input-background;
+        }
+        input, textarea, button {
+            padding: rems(8px);
+            border-radius: rems(4px);
+            outline: 0;
+        }
+        input:focus, textarea:focus {
+            border-color: $color-borders;
+            box-shadow: inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba($color-borders, 0.6);
+        }
+        button:focus, button:hover{
+            box-shadow: inset 0 1px 1px rgba(#000, 0.075), 0 0 8px rgba($color-input-button, 0.6);
+        }
+        button {
+            border: 2px solid $color-input-button;
+            background-color: $color-input-button-background;
+            color: $color-input-button;
+            width: 128px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: rems(14px);
+            grid-template-columns: 1fr;
+            grid-template-areas: 'first-name' 'last-name' 'email' 'subject' 'message';
+            margin-bottom: rems(14px);
+            @include mq(small) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 'first-name last-name' 'email email' 'subject subject' 'message message';
+            }
+
+            #first-name {
+                grid-area: first-name;
+            }
+            #last-name {
+                grid-area: last-name;
+            }
+            #email {
+                grid-area: email;
+            }
+            #subject {
+                grid-area: subject;
+            }
+            #message {
+                grid-area: message;
+            }
+        }
+    }
+}
