@@ -1,12 +1,48 @@
-nav {
-    background-color: $color-background;
-    border-right: rems(2px) solid $color-borders;
-    flex: 0 0 rems(150px);
-    height: 100vh;
+
+.nav-burger {
+    position: absolute;
+    display: flex;
+    @include mq(small) {
+        display: none;
+    }
+    flex-basis: rems(63px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: rems(63px);
+    height: rems(56px);
+    margin: rems(16px);
+    line-height: rems(46px);
+    font-size: rems(18px);
+    border-radius: rems(3px);
+    background-color: $color-theme;
+    &:hover {
+        background-color: darken($color-theme, 8%)
+    }
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 0;
+    justify-content: space-between;
+    padding: rems(16px) 0;
+    align-items: center;
+    div {
+        background-color: #fff;
+        width: rems(30px);
+        height: rems(4px);
+    }
+}
+
+nav {
+    display: none;
+    @include mq(small) {
+        display: flex;
+        background-color: $color-background;
+        flex-direction: column;
+        border-right: rems(2px) solid $color-theme;
+        flex: 0 0 rems(150px);
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
 
     div {
         padding: rems(12px) 0;
@@ -21,16 +57,16 @@ nav {
     }
     div > a {
         &:hover {
-            text-decoration: underline solid $color-borders rems(1.5px);
+            text-decoration: underline solid $color-theme rems(1.5px);
         }
     }
 
     h1 {
         margin: 0;
-        color: $color-borders;
+        color: $color-theme;
         font-size: rems(64px);
         height: 100px;
-        border-bottom: rems(2px) solid $color-borders;
+        border-bottom: rems(2px) solid $color-theme;
         
         a {
             padding: rems(8px);
@@ -38,8 +74,8 @@ nav {
     }
 
     .contact-highlight {
-        border-top: rems(2px) solid $color-borders;
-        border-bottom: rems(2px) solid $color-borders;
+        border-top: rems(2px) solid $color-theme;
+        border-bottom: rems(2px) solid $color-theme;
         font-weight: 600;
     }
 }

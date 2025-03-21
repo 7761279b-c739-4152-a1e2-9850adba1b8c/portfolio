@@ -28,38 +28,86 @@ a {
   margin-right: 30px;
 }
 
-/* line 1, ../../portfolio/website/scss/_sidemenu.scss */
-nav {
-  background-color: #fff;
-  border-right: 0.125rem solid #7cc;
-  flex: 0 0 9.375rem;
-  height: 100vh;
+/* line 2, ../../portfolio/website/scss/_sidemenu.scss */
+.nav-burger {
+  position: absolute;
+  display: flex;
+  flex-basis: 3.9375rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 3.9375rem;
+  height: 3.5rem;
+  margin: 1rem;
+  line-height: 2.875rem;
+  font-size: 1.125rem;
+  border-radius: 0.1875rem;
+  background-color: #7cc;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  position: sticky;
-  top: 0;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
 }
 
-/* line 11, ../../portfolio/website/scss/_sidemenu.scss */
+@media (min-width: 576px) {
+  /* line 2, ../../portfolio/website/scss/_sidemenu.scss */
+  .nav-burger {
+    display: none;
+  }
+}
+
+/* line 18, ../../portfolio/website/scss/_sidemenu.scss */
+.nav-burger:hover {
+  background-color: #59c1c1;
+}
+
+/* line 27, ../../portfolio/website/scss/_sidemenu.scss */
+.nav-burger div {
+  background-color: #fff;
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+/* line 34, ../../portfolio/website/scss/_sidemenu.scss */
+nav {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  /* line 34, ../../portfolio/website/scss/_sidemenu.scss */
+  nav {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    border-right: 0.125rem solid #7cc;
+    flex: 0 0 9.375rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+}
+
+/* line 47, ../../portfolio/website/scss/_sidemenu.scss */
 nav div {
   padding: 0.75rem 0;
   text-align: center;
   font-size: 1rem;
 }
 
-/* line 17, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 53, ../../portfolio/website/scss/_sidemenu.scss */
 nav a {
   text-decoration: none;
   text-underline-offset: 0.25rem;
   cursor: pointer;
 }
 
-/* line 23, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 59, ../../portfolio/website/scss/_sidemenu.scss */
 nav div > a:hover {
   text-decoration: underline solid #7cc 0.09375rem;
 }
 
-/* line 28, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 64, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 {
   margin: 0;
   color: #7cc;
@@ -68,12 +116,12 @@ nav h1 {
   border-bottom: 0.125rem solid #7cc;
 }
 
-/* line 35, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 71, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 a {
   padding: 0.5rem;
 }
 
-/* line 40, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 76, ../../portfolio/website/scss/_sidemenu.scss */
 nav .contact-highlight {
   border-top: 0.125rem solid #7cc;
   border-bottom: 0.125rem solid #7cc;
@@ -98,26 +146,40 @@ header h1 {
 /* line 1, ../../portfolio/website/scss/_projects.scss */
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: auto;
 }
 
-/* line 6, ../../portfolio/website/scss/_projects.scss */
+@media (min-width: 768px) {
+  /* line 1, ../../portfolio/website/scss/_projects.scss */
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 1, ../../portfolio/website/scss/_projects.scss */
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* line 12, ../../portfolio/website/scss/_projects.scss */
 .projects .project {
   text-decoration: none;
 }
 
-/* line 9, ../../portfolio/website/scss/_projects.scss */
+/* line 15, ../../portfolio/website/scss/_projects.scss */
 .projects .project img {
   height: 256px;
 }
 
-/* line 13, ../../portfolio/website/scss/_projects.scss */
+/* line 19, ../../portfolio/website/scss/_projects.scss */
 .projects .project h2 {
   margin: 0.5rem 0;
 }
 
-/* line 16, ../../portfolio/website/scss/_projects.scss */
+/* line 22, ../../portfolio/website/scss/_projects.scss */
 .projects .project p {
   margin: 0;
 }
@@ -127,7 +189,7 @@ header h1 {
   margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 1, ../../portfolio/website/scss/_contact.scss */
   .contact {
     display: flex;
@@ -209,7 +271,7 @@ header h1 {
   margin-bottom: 0.875rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   /* line 51, ../../portfolio/website/scss/_contact.scss */
   .contact form .form-grid {
     grid-template-columns: 1fr 1fr;
