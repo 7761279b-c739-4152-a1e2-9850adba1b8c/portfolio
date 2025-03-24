@@ -1,5 +1,9 @@
 .projects {
+    margin-top: rems(64px);
+    margin-bottom: rems(64px);
     display: grid;
+    grid-column-gap: rems(16px);
+    grid-row-gap: rems(24px);
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     @include mq(medium) {
@@ -10,10 +14,15 @@
     }
 
     .project {
+        position: relative;
+        top: 0;
+        transition: .5s ease;
         text-decoration: none;
 
         img {
-            height: 256px;
+            width: 100%;
+            max-width: 321.25px;
+            height: auto;//256px;
         }
 
         h2 {
@@ -23,6 +32,10 @@
         }
         p {
             margin: 0;
+        }
+
+        &:hover {
+            top: rems(-8px);
         }
 
     }

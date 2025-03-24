@@ -38,11 +38,11 @@ p {
     margin: 0;
     font-size: rems(20px);
     letter-spacing: rems(0.5px);
-    
-    a {
-        color: darken($color-theme, 15%);
-        &:hover {
-            color: $color-theme;
-        }
+}
+p a, h1 a {
+    color: darken($color-theme, 15%);
+    transition: .25s ease;
+    &:hover {
+        color: $color-theme;
     }
 }
