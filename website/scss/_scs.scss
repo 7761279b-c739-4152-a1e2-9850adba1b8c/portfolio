@@ -20,4 +20,15 @@
             color: $color-theme;
         }
     }
+
+    h2 {
+        font-size: rems(32px);
+        margin-bottom: rems(8px);
+    }
+    p {
+        margin: 0;
+        font-size: rems(20px);
+        letter-spacing: rems(0.5px);
+        text-align: left;
+    }
 }

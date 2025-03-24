@@ -10,7 +10,16 @@
         min-width: 150px;
         flex-grow: 1;
         h2 {
+            font-size: rems(32px);
             margin: 0;
+        }
+        h4 {
+            margin: rems(16px) 0 0;
+            font-size: rems(16px);
+        }
+        h3 {
+            margin: rems(8px) 0 rems(12px);
+            font-size: rems(24px)
         }
     }
     form {

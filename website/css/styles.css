@@ -41,7 +41,7 @@ a {
   line-height: 2.875rem;
   font-size: 1.125rem;
   border-radius: 0.1875rem;
-  background-color: #7cc;
+  background-color: #7c7;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ a {
 
 /* line 18, ../../portfolio/website/scss/_sidemenu.scss */
 .nav-burger:hover {
-  background-color: #59c1c1;
+  background-color: #59c159;
 }
 
 /* line 27, ../../portfolio/website/scss/_sidemenu.scss */
@@ -80,7 +80,7 @@ nav {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    border-right: 0.125rem solid #7cc;
+    border-right: 0.125rem solid #7c7;
     flex: 0 0 9.375rem;
     height: 100vh;
     position: sticky;
@@ -104,16 +104,16 @@ nav a {
 
 /* line 59, ../../portfolio/website/scss/_sidemenu.scss */
 nav div > a:hover {
-  text-decoration: underline solid #7cc 0.09375rem;
+  text-decoration: underline solid #7c7 0.09375rem;
 }
 
 /* line 64, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 {
   margin: 0;
-  color: #7cc;
+  color: #7c7;
   font-size: 4rem;
   height: 100px;
-  border-bottom: 0.125rem solid #7cc;
+  border-bottom: 0.125rem solid #7c7;
 }
 
 /* line 71, ../../portfolio/website/scss/_sidemenu.scss */
@@ -123,8 +123,8 @@ nav h1 a {
 
 /* line 76, ../../portfolio/website/scss/_sidemenu.scss */
 nav .contact-highlight {
-  border-top: 0.125rem solid #7cc;
-  border-bottom: 0.125rem solid #7cc;
+  border-top: 0.125rem solid #7c7;
+  border-bottom: 0.125rem solid #7c7;
   font-weight: 600;
 }
 
@@ -139,8 +139,13 @@ header {
 
 /* line 9, ../../portfolio/website/scss/_header.scss */
 header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   vertical-align: middle;
+}
+
+/* line 13, ../../portfolio/website/scss/_header.scss */
+header p {
+  font-size: 1.25rem;
 }
 
 /* line 1, ../../portfolio/website/scss/_projects.scss */
@@ -176,10 +181,11 @@ header h1 {
 
 /* line 19, ../../portfolio/website/scss/_projects.scss */
 .projects .project h2 {
+  font-size: 2rem;
   margin: 0.5rem 0;
 }
 
-/* line 22, ../../portfolio/website/scss/_projects.scss */
+/* line 23, ../../portfolio/website/scss/_projects.scss */
 .projects .project p {
   margin: 0;
 }
@@ -206,55 +212,68 @@ header h1 {
 
 /* line 12, ../../portfolio/website/scss/_contact.scss */
 .contact > div h2 {
+  font-size: 2rem;
   margin: 0;
 }
 
 /* line 16, ../../portfolio/website/scss/_contact.scss */
+.contact > div h4 {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+}
+
+/* line 20, ../../portfolio/website/scss/_contact.scss */
+.contact > div h3 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* line 25, ../../portfolio/website/scss/_contact.scss */
 .contact form {
   flex-basis: 300px;
   flex-grow: 2;
 }
 
-/* line 19, ../../portfolio/website/scss/_contact.scss */
+/* line 28, ../../portfolio/website/scss/_contact.scss */
 .contact form .hidden {
   display: none;
 }
 
-/* line 22, ../../portfolio/website/scss/_contact.scss */
+/* line 31, ../../portfolio/website/scss/_contact.scss */
 .contact form textarea {
   font-family: inherit;
 }
 
-/* line 25, ../../portfolio/website/scss/_contact.scss */
+/* line 34, ../../portfolio/website/scss/_contact.scss */
 .contact form input, .contact form textarea {
   background-color: #ddd;
   border: 2px solid #ddd;
 }
 
-/* line 27, ../../portfolio/website/scss/_contact.scss */
+/* line 36, ../../portfolio/website/scss/_contact.scss */
 .contact form input::placeholder, .contact form textarea::placeholder {
   color: #999;
 }
 
-/* line 32, ../../portfolio/website/scss/_contact.scss */
+/* line 41, ../../portfolio/website/scss/_contact.scss */
 .contact form input, .contact form textarea, .contact form button {
   padding: 0.5rem;
   border-radius: 0.25rem;
   outline: 0;
 }
 
-/* line 37, ../../portfolio/website/scss/_contact.scss */
+/* line 46, ../../portfolio/website/scss/_contact.scss */
 .contact form input:focus, .contact form textarea:focus {
-  border-color: #7cc;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(119, 204, 204, 0.6);
+  border-color: #7c7;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(119, 204, 119, 0.6);
 }
 
-/* line 41, ../../portfolio/website/scss/_contact.scss */
+/* line 50, ../../portfolio/website/scss/_contact.scss */
 .contact form button:focus, .contact form button:hover {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-/* line 44, ../../portfolio/website/scss/_contact.scss */
+/* line 53, ../../portfolio/website/scss/_contact.scss */
 .contact form button {
   border: 2px solid #000;
   background-color: #fff;
@@ -262,7 +281,7 @@ header h1 {
   width: 128px;
 }
 
-/* line 51, ../../portfolio/website/scss/_contact.scss */
+/* line 60, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid {
   display: grid;
   gap: 0.875rem;
@@ -272,34 +291,34 @@ header h1 {
 }
 
 @media (min-width: 768px) {
-  /* line 51, ../../portfolio/website/scss/_contact.scss */
+  /* line 60, ../../portfolio/website/scss/_contact.scss */
   .contact form .form-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'first-name last-name' 'email email' 'subject subject' 'message message';
   }
 }
 
-/* line 62, ../../portfolio/website/scss/_contact.scss */
+/* line 71, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #first-name {
   grid-area: first-name;
 }
 
-/* line 65, ../../portfolio/website/scss/_contact.scss */
+/* line 74, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #last-name {
   grid-area: last-name;
 }
 
-/* line 68, ../../portfolio/website/scss/_contact.scss */
+/* line 77, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #email {
   grid-area: email;
 }
 
-/* line 71, ../../portfolio/website/scss/_contact.scss */
+/* line 80, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #subject {
   grid-area: subject;
 }
 
-/* line 74, ../../portfolio/website/scss/_contact.scss */
+/* line 83, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #message {
   grid-area: message;
 }
@@ -324,17 +343,32 @@ header h1 {
 /* line 15, ../../portfolio/website/scss/_scs.scss */
 .scs a {
   text-decoration: none;
-  color: #43b3b3;
+  color: #43b343;
 }
 
 /* line 18, ../../portfolio/website/scss/_scs.scss */
 .scs a:hover {
   text-decoration: underline;
-  color: #7cc;
+  color: #7c7;
 }
 
-/* line 2, ../../portfolio/website/scss/coding-examples.scss */
+/* line 24, ../../portfolio/website/scss/_scs.scss */
+.scs h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 28, ../../portfolio/website/scss/_scs.scss */
+.scs p {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.03125rem;
+  text-align: left;
+}
+
+/* line 2, ../../portfolio/website/scss/_coding-examples.scss */
 .coding-examples h2 {
+  font-size: 2rem;
   text-align: center;
 }
 
