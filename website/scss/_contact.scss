@@ -11,7 +11,7 @@
         flex-grow: 1;
         h2 {
             font-size: rems(32px);
-            margin: 0;
+            margin-bottom: rems(16px);
         }
         h4 {
             margin: rems(16px) 0 0;
@@ -23,6 +23,7 @@
         }
     }
     form {
+        margin-top: rems(32px);
         flex-basis: 300px;
         flex-grow: 2;
         .hidden {

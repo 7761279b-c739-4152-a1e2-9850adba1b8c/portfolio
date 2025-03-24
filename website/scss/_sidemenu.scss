@@ -54,6 +54,9 @@ nav {
         text-decoration: none;
         text-underline-offset: rems(4px);
         cursor: pointer;
+        &:hover {
+            text-decoration: none;
+        }
     }
     div > a {
         &:hover {
