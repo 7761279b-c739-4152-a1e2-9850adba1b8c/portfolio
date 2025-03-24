@@ -372,4 +372,10 @@ header p {
   text-align: center;
 }
 
+/* line 2, ../../portfolio/website/scss/_about-me.scss */
+.about-me h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
