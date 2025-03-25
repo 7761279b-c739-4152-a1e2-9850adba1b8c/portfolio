@@ -19,3 +19,23 @@
         @error "Invalid breakpoint size `#{$breakpoint}`"
     }
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.woff?65rcna') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@mixin icon($icon) {
+    &::before {
+        font-family: 'icomoon' !important;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        content: $icon;
+    }
+}
+.icon-right {
+    @include icon("\ea3c");
+}

@@ -1,6 +1,8 @@
 .projects {
-    margin-top: rems(64px);
-    margin-bottom: rems(64px);
+    margin-top: rems(32px);
+    padding-top: rems(32px);
+    margin-bottom: rems(32px);
+    padding-bottom: rems(32px);
     display: grid;
     grid-column-gap: rems(16px);
     grid-row-gap: rems(24px);
