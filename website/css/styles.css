@@ -195,13 +195,22 @@ header {
 
 /* line 11, ../../portfolio/website/scss/_header.scss */
 header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   vertical-align: middle;
+  color: #fff;
 }
 
-/* line 15, ../../portfolio/website/scss/_header.scss */
+@media (min-width: 992px) {
+  /* line 11, ../../portfolio/website/scss/_header.scss */
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+/* line 19, ../../portfolio/website/scss/_header.scss */
 header p {
   font-size: 1.25rem;
+  color: #fff;
 }
 
 /* line 1, ../../portfolio/website/scss/_projects.scss */

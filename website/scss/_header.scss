@@ -9,10 +9,15 @@ header {
     justify-content: center;
 
     h1 {
-        font-size: rems(48px);
+        font-size: rems(40px);
         vertical-align: middle;
+        color: #fff;
+        @include mq(large) {
+            font-size: rems(48px);
+        }
     }
     p {
         font-size: rems(20px);
+        color: #fff;
     }
 }
