@@ -1,6 +1,6 @@
 
 .nav-burger {
-    position: absolute;
+    z-index: 100;
     display: flex;
     @include mq(small) {
         display: none;
@@ -29,6 +29,11 @@
         width: rems(30px);
         height: rems(4px);
     }
+}
+
+body > .nav-burger {
+    // on main page only, this goes over the top of the image
+    position: absolute;
 }
 
 nav {
