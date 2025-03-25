@@ -2,11 +2,12 @@ header {
     background-image: url('../img/banner.webp');
     background-repeat: repeat;
     background-attachment: fixed;
-    height: 384px;
+    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     h1 {
         font-size: rems(40px);
@@ -15,9 +16,42 @@ header {
         @include mq(large) {
             font-size: rems(48px);
         }
+        @include mq(xlarge) {
+            font-size: rems(64px);
+        }
     }
     p {
         font-size: rems(20px);
         color: #fff;
+        @include mq(large) {
+            font-size: rems(24px);
+        }
+        @include mq(xlarge) {
+            font-size: rems(32px);
+        }
+    }
+    .scroll-button {
+        position: absolute;
+        bottom: rems(32px);
+        left: 0;
+        right: 0;
+    }
+}
+.scroll-button {
+    a {
+        display: inline-block;
+        padding: rems(8px);
+        font-size: rems(20px);
+        line-height: rems(20px);
+        @include mq(large) {
+            font-size: rems(24px);
+            line-height: rems(24px);
+        }
+        text-decoration: none;
+        text-underline-offset: rems(4px);
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

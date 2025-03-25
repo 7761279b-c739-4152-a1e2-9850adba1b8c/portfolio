@@ -15,6 +15,11 @@
             @content;
         }
     }
+    @else if $breakpoint == 'xlarge' {
+        @media (min-width: $breakpoint-xlarge) {
+            @content;
+        }
+    }
     @else {
         @error "Invalid breakpoint size `#{$breakpoint}`"
     }
@@ -38,4 +43,10 @@
 }
 .icon-right {
     @include icon("\ea3c");
+}
+.chevron-down {
+    @include icon("\f078");
+}
+.chevron-up {
+    @include icon("\f077");
 }

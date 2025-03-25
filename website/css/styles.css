@@ -7,13 +7,31 @@
   font-display: block;
 }
 
-/* line 31, ../../portfolio/website/scss/_mixins.scss */
+/* line 36, ../../portfolio/website/scss/_mixins.scss */
 .icon-right::before {
   font-family: 'icomoon' !important;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
   content: "";
+}
+
+/* line 36, ../../portfolio/website/scss/_mixins.scss */
+.chevron-down::before {
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  content: "";
+}
+
+/* line 36, ../../portfolio/website/scss/_mixins.scss */
+.chevron-up::before {
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  content: "";
 }
 
 /* line 3, ../../portfolio/website/scss/_layout.scss */
@@ -27,52 +45,60 @@ body {
 /* line 10, ../../portfolio/website/scss/_layout.scss */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* line 14, ../../portfolio/website/scss/_layout.scss */
+@media (prefers-reduced-motion: reduce) {
+  /* line 10, ../../portfolio/website/scss/_layout.scss */
+  * {
+    scroll-behavior: auto;
+  }
+}
+
+/* line 18, ../../portfolio/website/scss/_layout.scss */
 .main {
   margin: 0;
   width: 100%;
 }
 
-/* line 19, ../../portfolio/website/scss/_layout.scss */
+/* line 23, ../../portfolio/website/scss/_layout.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 22, ../../portfolio/website/scss/_layout.scss */
+/* line 26, ../../portfolio/website/scss/_layout.scss */
 a:hover {
   text-decoration: underline solid #7c7 0.09375rem;
 }
 
-/* line 27, ../../portfolio/website/scss/_layout.scss */
+/* line 31, ../../portfolio/website/scss/_layout.scss */
 .container {
   margin-left: 30px;
   margin-right: 30px;
 }
 
-/* line 32, ../../portfolio/website/scss/_layout.scss */
+/* line 36, ../../portfolio/website/scss/_layout.scss */
 h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
-/* line 37, ../../portfolio/website/scss/_layout.scss */
+/* line 41, ../../portfolio/website/scss/_layout.scss */
 p {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0.03125rem;
 }
 
-/* line 42, ../../portfolio/website/scss/_layout.scss */
+/* line 46, ../../portfolio/website/scss/_layout.scss */
 p a, h1 a {
   color: #43b343;
   transition: .25s ease;
 }
 
-/* line 45, ../../portfolio/website/scss/_layout.scss */
+/* line 49, ../../portfolio/website/scss/_layout.scss */
 p a:hover, h1 a:hover {
   color: #7c7;
 }
@@ -186,14 +212,15 @@ header {
   background-image: url("../img/banner.webp");
   background-repeat: repeat;
   background-attachment: fixed;
-  height: 384px;
+  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
-/* line 11, ../../portfolio/website/scss/_header.scss */
+/* line 12, ../../portfolio/website/scss/_header.scss */
 header h1 {
   font-size: 2.5rem;
   vertical-align: middle;
@@ -201,16 +228,69 @@ header h1 {
 }
 
 @media (min-width: 992px) {
-  /* line 11, ../../portfolio/website/scss/_header.scss */
+  /* line 12, ../../portfolio/website/scss/_header.scss */
   header h1 {
     font-size: 3rem;
   }
 }
 
-/* line 19, ../../portfolio/website/scss/_header.scss */
+@media (min-width: 1200px) {
+  /* line 12, ../../portfolio/website/scss/_header.scss */
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
+/* line 23, ../../portfolio/website/scss/_header.scss */
 header p {
   font-size: 1.25rem;
   color: #fff;
+}
+
+@media (min-width: 992px) {
+  /* line 23, ../../portfolio/website/scss/_header.scss */
+  header p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 23, ../../portfolio/website/scss/_header.scss */
+  header p {
+    font-size: 2rem;
+  }
+}
+
+/* line 33, ../../portfolio/website/scss/_header.scss */
+header .scroll-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+}
+
+/* line 41, ../../portfolio/website/scss/_header.scss */
+.scroll-button a {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  text-underline-offset: 0.25rem;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  /* line 41, ../../portfolio/website/scss/_header.scss */
+  .scroll-button a {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* line 53, ../../portfolio/website/scss/_header.scss */
+.scroll-button a:hover {
+  text-decoration: none;
 }
 
 /* line 1, ../../portfolio/website/scss/_projects.scss */
@@ -405,6 +485,16 @@ header p {
 /* line 85, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #message {
   grid-area: message;
+}
+
+/* line 1, ../../portfolio/website/scss/_footer.scss */
+footer {
+  text-align: center;
+}
+
+/* line 3, ../../portfolio/website/scss/_footer.scss */
+footer .scroll-button {
+  margin-bottom: 2rem;
 }
 
 /* line 1, ../../portfolio/website/scss/_scs.scss */
