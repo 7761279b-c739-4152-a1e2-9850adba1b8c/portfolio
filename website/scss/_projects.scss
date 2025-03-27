@@ -35,6 +35,11 @@
         p {
             margin: 0;
         }
+        .description {
+            font-size: rems(16px);
+            letter-spacing: rems(0.3px);
+            margin-bottom: rems(4px);
+        }
 
         &:hover {
             top: rems(-8px);

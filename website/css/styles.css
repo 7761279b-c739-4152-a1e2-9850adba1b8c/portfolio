@@ -353,7 +353,14 @@ header .scroll-button {
   margin: 0;
 }
 
-/* line 39, ../../portfolio/website/scss/_projects.scss */
+/* line 38, ../../portfolio/website/scss/_projects.scss */
+.projects .project .description {
+  font-size: 1rem;
+  letter-spacing: 0.01875rem;
+  margin-bottom: 0.25rem;
+}
+
+/* line 44, ../../portfolio/website/scss/_projects.scss */
 .projects .project:hover {
   top: -0.5rem;
 }
