@@ -39,10 +39,21 @@ h2 {
     text-align: center;
     margin-bottom: rems(8px);
 }
+h3 {
+    font-size: rems(22px);
+    font-weight: 600;
+    margin-bottom: rems(4px);
+}
 p {
     margin: 0;
     font-size: rems(20px);
     letter-spacing: rems(0.5px);
+}
+pre {
+    font-size: rems(16px);
+    background-color: darken($color-background, 8%);
+    border-radius: rems(16px);
+    padding: rems(16px);
 }
 p a, h1 a {
     color: darken($color-theme, 15%);

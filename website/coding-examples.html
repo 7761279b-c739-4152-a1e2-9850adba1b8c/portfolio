@@ -25,8 +25,18 @@
                 <div></div><div></div><div></div>
             </a>
             <div class="coding-examples container">
-                <h2>Coding Examples</h3>
-                <p>Coming Soon</p>
+                <h2>Coding Examples</h2>
+                <p>More coming soon</p>
+
+                <h3>Example of a button mixin in scss</h3>
+                <p>from recreating netmatter's webpage<br>used to repeat the same styles on multiple button colors</p>
+<pre>@mixin button($color) {
+    @extend %btn;
+    background-color: $color;
+    &:hover {
+        background-color: darken($color, 8%)
+    }
+}</pre>
             </div>
         </div>
     </body>

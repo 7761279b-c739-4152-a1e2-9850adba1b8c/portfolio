@@ -87,19 +87,34 @@ h2 {
 }
 
 /* line 42, ../../portfolio/website/scss/_layout.scss */
+h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* line 47, ../../portfolio/website/scss/_layout.scss */
 p {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0.03125rem;
 }
 
-/* line 47, ../../portfolio/website/scss/_layout.scss */
+/* line 52, ../../portfolio/website/scss/_layout.scss */
+pre {
+  font-size: 1rem;
+  background-color: #ebebeb;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* line 58, ../../portfolio/website/scss/_layout.scss */
 p a, h1 a {
   color: #43b343;
   transition: .25s ease;
 }
 
-/* line 50, ../../portfolio/website/scss/_layout.scss */
+/* line 61, ../../portfolio/website/scss/_layout.scss */
 p a:hover, h1 a:hover {
   color: #7c7;
 }
