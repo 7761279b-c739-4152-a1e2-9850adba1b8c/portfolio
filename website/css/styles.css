@@ -120,8 +120,8 @@ p a:hover, h1 a:hover {
 }
 
 /* line 2, ../../portfolio/website/scss/_sidemenu.scss */
-.nav-burger {
-  z-index: 100;
+#nav-burger {
+  z-index: 50;
   display: flex;
   flex-basis: 3.9375rem;
   flex-grow: 0;
@@ -143,72 +143,75 @@ p a:hover, h1 a:hover {
 
 @media (min-width: 576px) {
   /* line 2, ../../portfolio/website/scss/_sidemenu.scss */
-  .nav-burger {
+  #nav-burger {
     display: none;
   }
 }
 
 /* line 18, ../../portfolio/website/scss/_sidemenu.scss */
-.nav-burger:hover {
+#nav-burger:hover {
   background-color: #59c159;
 }
 
 /* line 27, ../../portfolio/website/scss/_sidemenu.scss */
-.nav-burger div {
+#nav-burger div {
   background-color: #fff;
   width: 1.875rem;
   height: 0.25rem;
 }
 
 /* line 34, ../../portfolio/website/scss/_sidemenu.scss */
-body > .nav-burger {
+body > #nav-burger {
   position: absolute;
 }
 
 /* line 39, ../../portfolio/website/scss/_sidemenu.scss */
 nav {
   display: none;
+  background-color: #fff;
+  flex-direction: column;
+  border-right: 0.125rem solid #7c7;
+  flex: 0 0 9.375rem;
+  width: 150px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
 @media (min-width: 576px) {
   /* line 39, ../../portfolio/website/scss/_sidemenu.scss */
   nav {
     display: flex;
-    background-color: #fff;
-    flex-direction: column;
-    border-right: 0.125rem solid #7c7;
-    flex: 0 0 9.375rem;
-    height: 100vh;
     position: sticky;
-    top: 0;
   }
 }
 
-/* line 52, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 55, ../../portfolio/website/scss/_sidemenu.scss */
 nav div {
   padding: 0.75rem 0;
   text-align: center;
   font-size: 1rem;
 }
 
-/* line 58, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 61, ../../portfolio/website/scss/_sidemenu.scss */
 nav a {
   text-decoration: none;
   text-underline-offset: 0.25rem;
   cursor: pointer;
 }
 
-/* line 62, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 65, ../../portfolio/website/scss/_sidemenu.scss */
 nav a:hover {
   text-decoration: none;
 }
 
-/* line 67, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 70, ../../portfolio/website/scss/_sidemenu.scss */
 nav div > a:hover {
   text-decoration: underline solid #7c7 0.09375rem;
 }
 
-/* line 72, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 75, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 {
   margin: 0;
   font-size: 4rem;
@@ -216,16 +219,21 @@ nav h1 {
   border-bottom: 0.125rem solid #7c7;
 }
 
-/* line 78, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 81, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 a {
   padding: 0.5rem;
 }
 
-/* line 83, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 86, ../../portfolio/website/scss/_sidemenu.scss */
 nav .contact-highlight {
   border-top: 0.125rem solid #7c7;
   border-bottom: 0.125rem solid #7c7;
   font-weight: 600;
+}
+
+/* line 92, ../../portfolio/website/scss/_sidemenu.scss */
+nav.visible {
+  display: flex;
 }
 
 /* line 1, ../../portfolio/website/scss/_header.scss */
@@ -233,6 +241,7 @@ header {
   background-image: url("../img/banner.webp");
   background-repeat: repeat;
   background-attachment: fixed;
+  z-index: -100;
   height: 100vh;
   text-align: center;
   display: flex;
@@ -241,7 +250,7 @@ header {
   position: relative;
 }
 
-/* line 12, ../../portfolio/website/scss/_header.scss */
+/* line 13, ../../portfolio/website/scss/_header.scss */
 header h1 {
   font-size: 2.5rem;
   vertical-align: middle;
@@ -249,40 +258,40 @@ header h1 {
 }
 
 @media (min-width: 992px) {
-  /* line 12, ../../portfolio/website/scss/_header.scss */
+  /* line 13, ../../portfolio/website/scss/_header.scss */
   header h1 {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 12, ../../portfolio/website/scss/_header.scss */
+  /* line 13, ../../portfolio/website/scss/_header.scss */
   header h1 {
     font-size: 4rem;
   }
 }
 
-/* line 23, ../../portfolio/website/scss/_header.scss */
+/* line 24, ../../portfolio/website/scss/_header.scss */
 header p {
   font-size: 1.25rem;
   color: #fff;
 }
 
 @media (min-width: 992px) {
-  /* line 23, ../../portfolio/website/scss/_header.scss */
+  /* line 24, ../../portfolio/website/scss/_header.scss */
   header p {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 23, ../../portfolio/website/scss/_header.scss */
+  /* line 24, ../../portfolio/website/scss/_header.scss */
   header p {
     font-size: 2rem;
   }
 }
 
-/* line 33, ../../portfolio/website/scss/_header.scss */
+/* line 34, ../../portfolio/website/scss/_header.scss */
 header .scroll-button {
   position: absolute;
   bottom: 2rem;
@@ -290,7 +299,7 @@ header .scroll-button {
   right: 0;
 }
 
-/* line 41, ../../portfolio/website/scss/_header.scss */
+/* line 42, ../../portfolio/website/scss/_header.scss */
 .scroll-button a {
   display: inline-block;
   padding: 0.5rem;
@@ -302,14 +311,14 @@ header .scroll-button {
 }
 
 @media (min-width: 992px) {
-  /* line 41, ../../portfolio/website/scss/_header.scss */
+  /* line 42, ../../portfolio/website/scss/_header.scss */
   .scroll-button a {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
 }
 
-/* line 53, ../../portfolio/website/scss/_header.scss */
+/* line 54, ../../portfolio/website/scss/_header.scss */
 .scroll-button a:hover {
   text-decoration: none;
 }

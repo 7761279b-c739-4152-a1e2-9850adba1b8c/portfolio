@@ -1,6 +1,6 @@
 
-.nav-burger {
-    z-index: 100;
+#nav-burger {
+    z-index: 50;
     display: flex;
     @include mq(small) {
         display: none;
@@ -31,22 +31,25 @@
     }
 }
 
-body > .nav-burger {
+body > #nav-burger {
     // on main page only, this goes over the top of the image
     position: absolute;
 }
 
 nav {
     display: none;
+    background-color: $color-background;
+    flex-direction: column;
+    border-right: rems(2px) solid $color-theme;
+    flex: 0 0 rems(150px);
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 100;
     @include mq(small) {
         display: flex;
-        background-color: $color-background;
-        flex-direction: column;
-        border-right: rems(2px) solid $color-theme;
-        flex: 0 0 rems(150px);
-        height: 100vh;
         position: sticky;
-        top: 0;
     }
 
     div {
@@ -85,4 +88,7 @@ nav {
         border-bottom: rems(2px) solid $color-theme;
         font-weight: 600;
     }
+}
+nav.visible {
+    display: flex;
 }
