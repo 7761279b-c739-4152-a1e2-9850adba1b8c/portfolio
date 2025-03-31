@@ -37,7 +37,7 @@ body > #nav-burger {
 }
 
 nav {
-    display: none;
+    display: flex;
     background-color: $color-background;
     flex-direction: column;
     border-right: rems(2px) solid $color-theme;
@@ -46,9 +46,13 @@ nav {
     height: 100vh;
     position: absolute;
     top: 0;
+    left: -150px;
     z-index: 100;
+    transition: 0.25s ease;
+    transform: translateX(0px);
+
     @include mq(small) {
-        display: flex;
+        transition: none;
         position: sticky;
     }
 
@@ -90,5 +94,5 @@ nav {
     }
 }
 nav.visible {
-    display: flex;
+    transform: translateX(150px);
 }

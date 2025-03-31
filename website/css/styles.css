@@ -60,47 +60,48 @@ body {
 .main {
   margin: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
-/* line 24, ../../portfolio/website/scss/_layout.scss */
+/* line 25, ../../portfolio/website/scss/_layout.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 27, ../../portfolio/website/scss/_layout.scss */
+/* line 28, ../../portfolio/website/scss/_layout.scss */
 a:hover {
   text-decoration: underline solid #7c7 0.09375rem;
 }
 
-/* line 32, ../../portfolio/website/scss/_layout.scss */
+/* line 33, ../../portfolio/website/scss/_layout.scss */
 .container {
   margin-left: 30px;
   margin-right: 30px;
 }
 
-/* line 37, ../../portfolio/website/scss/_layout.scss */
+/* line 38, ../../portfolio/website/scss/_layout.scss */
 h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
-/* line 42, ../../portfolio/website/scss/_layout.scss */
+/* line 43, ../../portfolio/website/scss/_layout.scss */
 h3 {
   font-size: 1.375rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-/* line 47, ../../portfolio/website/scss/_layout.scss */
+/* line 48, ../../portfolio/website/scss/_layout.scss */
 p {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0.03125rem;
 }
 
-/* line 52, ../../portfolio/website/scss/_layout.scss */
+/* line 53, ../../portfolio/website/scss/_layout.scss */
 pre {
   font-size: 1rem;
   background-color: #ebebeb;
@@ -108,13 +109,13 @@ pre {
   padding: 1rem;
 }
 
-/* line 58, ../../portfolio/website/scss/_layout.scss */
+/* line 59, ../../portfolio/website/scss/_layout.scss */
 p a, h1 a {
   color: #43b343;
   transition: .25s ease;
 }
 
-/* line 61, ../../portfolio/website/scss/_layout.scss */
+/* line 62, ../../portfolio/website/scss/_layout.scss */
 p a:hover, h1 a:hover {
   color: #7c7;
 }
@@ -167,7 +168,7 @@ body > #nav-burger {
 
 /* line 39, ../../portfolio/website/scss/_sidemenu.scss */
 nav {
-  display: none;
+  display: flex;
   background-color: #fff;
   flex-direction: column;
   border-right: 0.125rem solid #7c7;
@@ -176,42 +177,45 @@ nav {
   height: 100vh;
   position: absolute;
   top: 0;
+  left: -150px;
   z-index: 100;
+  transition: 0.25s ease;
+  transform: translateX(0px);
 }
 
 @media (min-width: 576px) {
   /* line 39, ../../portfolio/website/scss/_sidemenu.scss */
   nav {
-    display: flex;
+    transition: none;
     position: sticky;
   }
 }
 
-/* line 55, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 59, ../../portfolio/website/scss/_sidemenu.scss */
 nav div {
   padding: 0.75rem 0;
   text-align: center;
   font-size: 1rem;
 }
 
-/* line 61, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 65, ../../portfolio/website/scss/_sidemenu.scss */
 nav a {
   text-decoration: none;
   text-underline-offset: 0.25rem;
   cursor: pointer;
 }
 
-/* line 65, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 69, ../../portfolio/website/scss/_sidemenu.scss */
 nav a:hover {
   text-decoration: none;
 }
 
-/* line 70, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 74, ../../portfolio/website/scss/_sidemenu.scss */
 nav div > a:hover {
   text-decoration: underline solid #7c7 0.09375rem;
 }
 
-/* line 75, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 79, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 {
   margin: 0;
   font-size: 4rem;
@@ -219,21 +223,21 @@ nav h1 {
   border-bottom: 0.125rem solid #7c7;
 }
 
-/* line 81, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 85, ../../portfolio/website/scss/_sidemenu.scss */
 nav h1 a {
   padding: 0.5rem;
 }
 
-/* line 86, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 90, ../../portfolio/website/scss/_sidemenu.scss */
 nav .contact-highlight {
   border-top: 0.125rem solid #7c7;
   border-bottom: 0.125rem solid #7c7;
   font-weight: 600;
 }
 
-/* line 92, ../../portfolio/website/scss/_sidemenu.scss */
+/* line 96, ../../portfolio/website/scss/_sidemenu.scss */
 nav.visible {
-  display: flex;
+  transform: translateX(150px);
 }
 
 /* line 1, ../../portfolio/website/scss/_header.scss */

@@ -1,6 +1,7 @@
 let isopen = false;
 
-function open() {
+function open(event) {
+    event.stopPropagation(); // stop main from triggering close on same click
     for (let element of document.getElementsByTagName('nav')) {
         element.className = 'visible';
     }
