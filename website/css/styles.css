@@ -452,7 +452,7 @@ header .scroll-button {
 /* line 36, ../../portfolio/website/scss/_contact.scss */
 .contact form input, .contact form textarea {
   background-color: #ddd;
-  border: 2px solid #ddd;
+  border: 2px solid #ccc;
 }
 
 /* line 38, ../../portfolio/website/scss/_contact.scss */
@@ -474,11 +474,23 @@ header .scroll-button {
 }
 
 /* line 52, ../../portfolio/website/scss/_contact.scss */
+.contact form input.invalid, .contact form textarea.invalid {
+  background-color: #ecc;
+  border-color: #f99;
+}
+
+/* line 55, ../../portfolio/website/scss/_contact.scss */
+.contact form input.invalid:focus, .contact form textarea.invalid:focus {
+  border-color: #d33;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 51, 51, 0.6);
+}
+
+/* line 60, ../../portfolio/website/scss/_contact.scss */
 .contact form button:focus, .contact form button:hover {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-/* line 55, ../../portfolio/website/scss/_contact.scss */
+/* line 63, ../../portfolio/website/scss/_contact.scss */
 .contact form button {
   border: 2px solid #000;
   background-color: #fff;
@@ -486,7 +498,7 @@ header .scroll-button {
   width: 128px;
 }
 
-/* line 62, ../../portfolio/website/scss/_contact.scss */
+/* line 70, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid {
   display: grid;
   gap: 0.875rem;
@@ -496,36 +508,45 @@ header .scroll-button {
 }
 
 @media (min-width: 768px) {
-  /* line 62, ../../portfolio/website/scss/_contact.scss */
+  /* line 70, ../../portfolio/website/scss/_contact.scss */
   .contact form .form-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'first-name last-name' 'email email' 'subject subject' 'message message';
   }
 }
 
-/* line 73, ../../portfolio/website/scss/_contact.scss */
+/* line 81, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #first-name {
   grid-area: first-name;
 }
 
-/* line 76, ../../portfolio/website/scss/_contact.scss */
+/* line 84, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #last-name {
   grid-area: last-name;
 }
 
-/* line 79, ../../portfolio/website/scss/_contact.scss */
+/* line 87, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #email {
   grid-area: email;
 }
 
-/* line 82, ../../portfolio/website/scss/_contact.scss */
+/* line 90, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #subject {
   grid-area: subject;
 }
 
-/* line 85, ../../portfolio/website/scss/_contact.scss */
+/* line 93, ../../portfolio/website/scss/_contact.scss */
 .contact form .form-grid #message {
   grid-area: message;
+}
+
+/* line 98, ../../portfolio/website/scss/_contact.scss */
+.contact form #formError {
+  background-color: #ecc;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 /* line 1, ../../portfolio/website/scss/_footer.scss */
