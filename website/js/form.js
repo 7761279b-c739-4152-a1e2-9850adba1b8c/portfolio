@@ -57,6 +57,7 @@ function invalidMessage() {
     return true;
 }
 function showErrorMessage() {
+    hideErrorMessage();
     const element = document.createElement('div');
     element.id = "formError"
     element.innerHTML = "<p>Unable to submit form: some fields are invalid.</p>";
