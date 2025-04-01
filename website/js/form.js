@@ -116,3 +116,8 @@ document.getElementById('last-name').addEventListener('focusout', invalidLastNam
 document.getElementById('email').addEventListener('focusout', invalidEmail);
 document.getElementById('subject').addEventListener('focusout', invalidSubject);
 document.getElementById('message').addEventListener('focusout', invalidMessage);
+
+document.getElementsByTagName('form')[0].addEventListener('submit', (event) =>  {
+    event.preventDefault();
+    // for now just prevent page refreshing, later will send to backend
+})
