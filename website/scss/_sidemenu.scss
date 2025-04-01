@@ -44,7 +44,7 @@ nav {
     flex: 0 0 rems(150px);
     width: 150px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -150px;
     z-index: 100;

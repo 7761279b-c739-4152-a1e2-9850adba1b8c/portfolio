@@ -175,7 +175,7 @@ nav {
   flex: 0 0 9.375rem;
   width: 150px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -150px;
   z-index: 100;
