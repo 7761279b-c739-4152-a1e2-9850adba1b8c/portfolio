@@ -95,4 +95,5 @@ nav {
 }
 nav.visible {
     transform: translateX(150px);
+    box-shadow: 0 0 0 calc(100vw - 150px) rgba(#000, 0.5);
 }

@@ -7,10 +7,11 @@ function open(event) {
     }
     isopen = true;
 }
-function close() {
+function close(event) {
     if (isopen) {
         for (let element of document.getElementsByTagName('nav')) {
             element.className = '';
+            event.preventDefault();
         }
         isopen = false;
     }
