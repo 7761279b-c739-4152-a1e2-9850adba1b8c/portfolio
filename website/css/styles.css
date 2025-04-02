@@ -542,11 +542,37 @@ header .scroll-button {
 
 /* line 98, ../../portfolio/website/scss/_contact.scss */
 .contact form #formError {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ecc;
   color: #000;
   padding: 0.5rem;
   border-radius: 0.25rem;
   margin-bottom: 1rem;
+}
+
+/* line 109, ../../portfolio/website/scss/_contact.scss */
+.contact form #formError a {
+  padding: 0.5rem;
+  padding-bottom: 0.375rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+/* line 36, ../../portfolio/website/scss/_mixins.scss */
+.contact form #formError a::before {
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  content: "";
+}
+
+/* line 115, ../../portfolio/website/scss/_contact.scss */
+.contact form #formError a:hover {
+  text-decoration: none;
 }
 
 /* line 1, ../../portfolio/website/scss/_footer.scss */

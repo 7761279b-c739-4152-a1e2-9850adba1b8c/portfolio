@@ -86,7 +86,10 @@ function showErrorMessage(invalids) {
         content += "<p>Message is required</p>";
     }
     console.log(content);
-    element.innerHTML = content;
+    element.innerHTML = `<div>${content}</div>`;
+    const close = document.createElement('a');
+    close.addEventListener('click', hideErrorMessage);
+    element.append(close);
     document.getElementsByTagName('form')[0].prepend(element);
 }
 function hideErrorMessage() {

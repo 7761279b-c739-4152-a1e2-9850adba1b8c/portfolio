@@ -96,11 +96,26 @@
         }
 
         #formError {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             background-color: $color-input-background-wrong;
             color: #000;
             padding: rems(8px);
             border-radius: rems(4px);
             margin-bottom: rems(16px);
+
+            a {
+                @include icon('\ea0f');
+                padding: rems(8px);
+                padding-bottom: rems(6px);
+                border-radius: rems(4px);
+                background-color: $color-background;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
