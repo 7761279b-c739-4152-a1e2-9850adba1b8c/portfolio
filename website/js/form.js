@@ -40,9 +40,11 @@ function invalidEmail() {
         element.className = 'invalid'
         if (element.value == '') {
             element.setCustomValidity("Email address is required");
+            invalids ^= (invalids & 0b1100);
             invalids |= 0b100;
         } else {
             element.setCustomValidity("Invalid email address");
+            invalids ^= (invalids & 0b1100);
             invalids |= 0b1000;
         }
     }
