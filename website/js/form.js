@@ -7,7 +7,6 @@ let visible = false;
 
 function invalidFirstName() {
     const element = document.getElementById('first-name');
-    console.log(element.value);
     if (element.value != '') {
         element.className = 'valid'
         element.setCustomValidity("");
