@@ -37,6 +37,16 @@
         background-color: darken($color, 8%)
     }
 }</pre>
+                <h3>Example of adding an element to a page</h3>
+                <p>from js arrays [modified since this is split across functions originally]<br></p>
+<pre>element = document.createElement('div');
+element.classList.add('box');
+element.innerHTML = `&lt;h3&gt;Images for: &lt;code&gt;${name}&lt;/code&gt;.&lt;/h3&gt;
+    &lt;div class="img-grid"&gt;&lt;/div&gt;`;
+
+assigned.innerHTML = '';
+assigned.appendChild(element);
+</pre>
             </div>
         </div>
         <script src="js/nav.js"></script>
