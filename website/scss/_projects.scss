@@ -20,6 +20,11 @@
         top: 0;
         transition: .5s ease;
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        :last-child {
+            margin-top: auto;
+        }
 
         img {
             width: 100%;

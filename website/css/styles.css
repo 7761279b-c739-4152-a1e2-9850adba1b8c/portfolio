@@ -360,35 +360,42 @@ header .scroll-button {
   top: 0;
   transition: .5s ease;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
-/* line 24, ../../portfolio/website/scss/_projects.scss */
+/* line 25, ../../portfolio/website/scss/_projects.scss */
+.projects .project :last-child {
+  margin-top: auto;
+}
+
+/* line 29, ../../portfolio/website/scss/_projects.scss */
 .projects .project img {
   width: 100%;
   max-width: 321.25px;
   height: auto;
 }
 
-/* line 30, ../../portfolio/website/scss/_projects.scss */
+/* line 35, ../../portfolio/website/scss/_projects.scss */
 .projects .project h2 {
   text-align: left;
   font-size: 2rem;
   margin: 0.5rem 0;
 }
 
-/* line 35, ../../portfolio/website/scss/_projects.scss */
+/* line 40, ../../portfolio/website/scss/_projects.scss */
 .projects .project p {
   margin: 0;
 }
 
-/* line 38, ../../portfolio/website/scss/_projects.scss */
+/* line 43, ../../portfolio/website/scss/_projects.scss */
 .projects .project .description {
   font-size: 1rem;
   letter-spacing: 0.01875rem;
   margin-bottom: 0.25rem;
 }
 
-/* line 44, ../../portfolio/website/scss/_projects.scss */
+/* line 49, ../../portfolio/website/scss/_projects.scss */
 .projects .project:hover {
   top: -0.5rem;
 }
