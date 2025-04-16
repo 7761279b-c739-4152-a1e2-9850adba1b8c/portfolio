@@ -29,7 +29,7 @@
                 <p>More coming soon</p>
 
                 <h3>Example of a button mixin in scss</h3>
-                <p>from recreating netmatter's webpage<br>used to repeat the same styles on multiple button colors</p>
+                <p>from recreating netmatters' webpage<br>used to repeat the same styles on multiple button colors</p>
 <pre>@mixin button($color) {
     @extend %btn;
     background-color: $color;
@@ -37,7 +37,26 @@
         background-color: darken($color, 8%)
     }
 }</pre>
-                <h3>Example of adding an element to a page</h3>
+                <h3>Example of detecting scroll (for a header to show) in JavaScript</h3>
+                <p>from recreating netmatters' website<br>used to show a header when you scroll up and hide it when you scroll down</p>
+<pre>let lastScrollY = window.scrollY;
+let scrollDirection = true;
+window.addEventListener('scrollend', (event) => {
+    if (scrollDirection) {
+        closeHeader();
+    } else {
+        openHeader();
+    }
+})
+window.addEventListener('scroll', () => {
+    scrollDirection = lastScrollY < window.scrollY;
+    lastScrollY = window.scrollY;
+    if (lastScrollY == 0) {
+        scrollDirection = true;
+        closeHeader();
+    }
+});</pre>
+                <h3>Example of adding an element to a page in JavaScript</h3>
                 <p>from js arrays [modified since this is split across functions originally]<br></p>
 <pre>element = document.createElement('div');
 element.classList.add('box');
