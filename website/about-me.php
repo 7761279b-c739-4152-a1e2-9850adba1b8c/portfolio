@@ -1,35 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
-        <!-- <title></title> -->
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-
-    <body>
-        <nav>
-            <!-- navigation sidebar -->
-            <div><h1><a href="index.html">J</a></h1></div>
-            <div><a href="about-me.html">About Me</a></div>
-            <div><a href="index.html#portfolio">My Portfolio</a></div>
-            <div><a href="coding-examples.html">Coding Examples</a></div>
-            <div><a href="scs-scheme.html">SCS Scheme</a></div>
-            <div class="contact-highlight"><a href="index.html#contact">Contact Me</a></div>
-
-        </nav>
-        <div class="main">
-            <a id="nav-burger">
-                <div></div><div></div><div></div>
-            </a>
-            <div class="about-me container">
-                <h2>About me</h2>
-                <h3>Placeholder text</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-        <script src="js/nav.js"></script>
-    </body>
-</html>
+<?php 
+$title = "About Me";
+require 'parts/header.php';
+?>
+<div class="main">
+    <a id="nav-burger">
+        <div></div><div></div><div></div>
+    </a>
+    <div class="about-me container">
+        <h2>About me</h2>
+        <h3>Placeholder text</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+<?php require 'parts/footer.php'; ?>
