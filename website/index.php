@@ -1,4 +1,11 @@
-<?php 
+<?php
+
+$form_errors = [];
+// form success will be done using `?submit=true` `$_GET["submit"] == "true"` value
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    include 'parts/form-submit.php';
+}
+
 $title = "My Portfolio";
 require 'parts/header.php';
 ?>
@@ -40,7 +47,6 @@ require 'parts/header.php';
             <h2>Project Three</h2>
             <p>View Project <span class="icon-right"></span></p>
         </a>
-
     </div>
     <div class="contact container">
         <!-- contact form -->
@@ -48,7 +54,16 @@ require 'parts/header.php';
             <h2> Get In Touch</h2>
             <p>If you want to get in touch with me, please fill out the form and I'll aim to respond to you in 2 working days.</p>
             </div>
-            <form aria-live>
+            <form method="POST" action="#" aria-live>
+            <?php if(!empty($form_errors)): ?>
+                <div id="formError">
+                    <p>Unable to submit form:</p>
+                        <?php foreach($form_errors as $error): ?>
+                            <p><?= $error ?></p>
+                        <?php endforeach; ?>
+                    <a></a>
+                </div>
+            <?php endif; ?>
             <div class="form-grid" id="contact">
                 <label for="first-name" class="hidden">First Name</label>
                 <input type="text" id="first-name" name="first-name" placeholder="First Name*" />

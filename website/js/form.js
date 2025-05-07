@@ -154,7 +154,16 @@ document.getElementById('message').addEventListener('focusout', () => {
     }
 });
 
-document.getElementsByTagName('form')[0].addEventListener('submit', (event) =>  {
-    event.preventDefault();
-    // for now just prevent page refreshing, later will send to backend
-})
+// document.getElementsByTagName('form')[0].addEventListener('submit', (event) =>  {
+//     event.preventDefault();
+//     // for now just prevent page refreshing, later will send to backend
+// })
+
+// if form errors from php, add event listener to close them
+if (document.getElementById('formError') != undefined) {
+    for (element of document.getElementById('formError').children) {
+        if (element.tagName.toLowerCase() == 'a') {
+            element.addEventListener('click', hideErrorMessage);
+        }
+    }
+}
