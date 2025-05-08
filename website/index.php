@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $title = "My Portfolio";
+$description = "My project Portfolio";
 require 'parts/header.php';
 ?>
 <a id="nav-burger">

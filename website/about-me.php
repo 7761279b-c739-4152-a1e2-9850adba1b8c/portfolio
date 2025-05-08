@@ -1,5 +1,6 @@
 <?php 
 $title = "About Me";
+$description = "Placeholder text";
 require 'parts/header.php';
 ?>
 <div class="main">
