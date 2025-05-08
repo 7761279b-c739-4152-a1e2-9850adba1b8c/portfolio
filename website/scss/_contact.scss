@@ -116,6 +116,10 @@
                     text-decoration: none;
                 }
             }
+            &.formSuccess {
+                background-color: $color-success;
+                color: white;
+            }
         }
     }
 }

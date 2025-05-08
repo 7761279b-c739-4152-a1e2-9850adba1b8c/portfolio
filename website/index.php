@@ -55,7 +55,11 @@ require 'parts/header.php';
             <p>If you want to get in touch with me, please fill out the form and I'll aim to respond to you in 2 working days.</p>
             </div>
             <form method="POST" action="#" aria-live>
-            <?php if(!empty($form_errors)): ?>
+            <?php if($_GET["submit"] ?? "false" == "true"): ?>
+                <div id="formError" class="formSuccess">
+                    <p>Form successfully submitted</p>
+                </div>
+            <?php elseif(!empty($form_errors)): ?>
                 <div id="formError">
                     <p>Unable to submit form:</p>
                         <?php foreach($form_errors as $error): ?>

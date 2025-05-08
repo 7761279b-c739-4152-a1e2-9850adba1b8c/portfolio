@@ -582,6 +582,12 @@ header .scroll-button {
   text-decoration: none;
 }
 
+/* line 119, ../../portfolio/website/scss/_contact.scss */
+.contact form #formError.formSuccess {
+  background-color: #7c7;
+  color: white;
+}
+
 /* line 1, ../../portfolio/website/scss/_footer.scss */
 footer {
   text-align: center;

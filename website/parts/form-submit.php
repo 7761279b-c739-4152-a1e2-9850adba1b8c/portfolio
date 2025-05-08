@@ -47,4 +47,4 @@ $db->query('insert into contact(first_name, last_name, email, phone, subject, me
 ]);
 
 
-header("location: ?submit=true");
+header("location: ?submit=true#formError");
