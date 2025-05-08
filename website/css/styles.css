@@ -81,27 +81,35 @@ a:hover {
 }
 
 /* line 38, ../../portfolio/website/scss/_layout.scss */
-h2 {
-  font-size: 2rem;
+h1 {
+  font-size: 2.625rem;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0;
 }
 
 /* line 43, ../../portfolio/website/scss/_layout.scss */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* line 49, ../../portfolio/website/scss/_layout.scss */
 h3 {
   font-size: 1.375rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-/* line 48, ../../portfolio/website/scss/_layout.scss */
+/* line 54, ../../portfolio/website/scss/_layout.scss */
 p {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0.03125rem;
 }
 
-/* line 53, ../../portfolio/website/scss/_layout.scss */
+/* line 59, ../../portfolio/website/scss/_layout.scss */
 pre {
   font-size: 1rem;
   background-color: #ebebeb;
@@ -109,13 +117,13 @@ pre {
   padding: 1rem;
 }
 
-/* line 59, ../../portfolio/website/scss/_layout.scss */
+/* line 65, ../../portfolio/website/scss/_layout.scss */
 p a, h1 a {
   color: #43b343;
   transition: .25s ease;
 }
 
-/* line 62, ../../portfolio/website/scss/_layout.scss */
+/* line 68, ../../portfolio/website/scss/_layout.scss */
 p a:hover, h1 a:hover {
   color: #7c7;
 }
@@ -600,7 +608,7 @@ footer .scroll-button {
 
 /* line 1, ../../portfolio/website/scss/_scs.scss */
 .scs {
-  margin-top: 30px;
+  margin-top: 16px;
   padding-bottom: 30px;
   min-height: calc(100vh - 60px);
   display: flex;

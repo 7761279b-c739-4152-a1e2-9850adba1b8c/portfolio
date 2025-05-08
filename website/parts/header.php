@@ -6,16 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="ROBOTS" content="NOINDEX,NOFOLLOW" />
         <title><?= $title ?></title>
+        <meta name="description" content="<?= $description ?>" />
         <link rel="stylesheet" href="css/styles.css" />
     </head>
 
     <body>
         <nav>
             <!-- navigation sidebar -->
-            <div><h1><a href="index.php">J</a></h1></div>
-            <div><a href="about-me.php">About Me</a></div>
-            <div><a href="index.php#portfolio">My Portfolio</a></div>
-            <div><a href="coding-examples.php">Coding Examples</a></div>
-            <div><a href="scs-scheme.php">SCS Scheme</a></div>
-            <div class="contact-highlight"><a href="index.php#contact">Contact Me</a></div>
+            <div><h1><a href=".">J</a></h1></div>
+            <div><a href="about-me">About Me</a></div>
+            <div><a href=".#portfolio">My Portfolio</a></div>
+            <div><a href="coding-examples">Coding Examples</a></div>
+            <div><a href="scs-scheme">SCS Scheme</a></div>
+            <div class="contact-highlight"><a href=".#contact">Contact Me</a></div>
         </nav>

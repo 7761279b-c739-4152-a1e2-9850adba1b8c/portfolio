@@ -31,19 +31,19 @@ require 'parts/header.php';
     <div class="projects container" id="portfolio">
         <!-- projects list -->
         <a class="project" href="http://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
-            <img src="img/recreating-netmatters.webp" class="project-img" />
+            <img src="img/recreating-netmatters.webp" class="project-img" alt="preview of recreating netmatters' website project" />
             <h2>Project One</h2>
             <p class="description">Recreating Netmatters' Website</p>
             <p>View Project <span class="icon-right"></span></p>
         </a>
         <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
-            <img src="img/js-arrays.webp" class="project-img" />
+            <img src="img/js-arrays.webp" class="project-img" alt="preview of js arrays project" />
             <h2>Project Two</h2>
             <p class="description">JavaScript array<br>(dynamcially adding content to a webpage)</p>
             <p>View Project <span class="icon-right"></span></p>
         </a>
         <a class="project" href="#" target="_blank">
-            <img src="img/blankproject.webp" class="project-img" />
+            <img src="img/blankproject.webp" class="project-img" alt="placeholder image" />
             <h2>Project Three</h2>
             <p>View Project <span class="icon-right"></span></p>
         </a>
