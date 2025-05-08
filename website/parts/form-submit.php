@@ -33,6 +33,7 @@ if (!empty($form_errors)) {
     return;
 }
 
+require_once realpath(__DIR__ . "/../vendor/autoload.php");
 
 require 'parts/database.php';
 
@@ -45,6 +46,25 @@ $db->query('insert into contact(first_name, last_name, email, phone, subject, me
     'subject' => $_POST['subject'],
     'message' => $_POST['message']
 ]);
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+$mail->Host = $_ENV['MAIL_HOST'];
+$mail->SMTPAuth = true;
+$mail->Username = $_ENV['MAIL_USERNAME'];
+$mail->Password = $_ENV['MAIL_PASSWORD'];
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = $_ENV['MAIL_PORT'];
+
+$mail->addAddress($_ENV['MAIL_TARGET']);
+$mail->Body = 'New form submission';
+
+if (!$mail->send()) {
+    // mail failed to send (do I put this as an error? Since the form submitted to database ok)
+}
 
 
 header("location: ?submit=true#formError");
