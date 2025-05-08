@@ -7,7 +7,7 @@ require 'parts/header.php';
         <div></div><div></div><div></div>
     </a>
     <div class="coding-examples container">
-        <h2>Coding Examples</h2>
+        <h1>Coding Examples</h1>
         <p>More coming soon</p>
 
         <h3>Example of a button mixin in scss</h3>

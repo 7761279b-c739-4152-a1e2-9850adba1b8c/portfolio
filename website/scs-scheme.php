@@ -7,6 +7,7 @@ require 'parts/header.php';
         <div></div><div></div><div></div>
     </a>
     <div class="scs container">
+        <h1>Scion Coalition Scheme</h1>
         <div class="scs-intro">
             <h2>Introduction to Scion Coalition Scheme</h2>
             <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
