@@ -37,13 +37,13 @@ require 'parts/header.php';
             <p>View Project <span class="icon-right"></span></p>
         </a>
         <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
-            <img src="img/project1.webp" class="project-img" />
+            <img src="img/js-arrays.webp" class="project-img" />
             <h2>Project Two</h2>
             <p class="description">JavaScript array<br>(dynamcially adding content to a webpage)</p>
             <p>View Project <span class="icon-right"></span></p>
         </a>
         <a class="project" href="#" target="_blank">
-            <img src="img/project1.webp" class="project-img" />
+            <img src="img/blankproject.webp" class="project-img" />
             <h2>Project Three</h2>
             <p>View Project <span class="icon-right"></span></p>
         </a>
