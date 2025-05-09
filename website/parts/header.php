@@ -14,9 +14,9 @@
         <nav>
             <!-- navigation sidebar -->
             <div><h2><a href=".">J</a></h2></div>
-            <div><a href="about-me">About Me</a></div>
+            <div<?= $current == 'about-me' ? ' class="current"' : '' ?>><a href="about-me">About Me</a></div>
             <div><a href=".#portfolio">My Portfolio</a></div>
-            <div><a href="coding-examples">Coding Examples</a></div>
-            <div><a href="scs-scheme">SCS Scheme</a></div>
+            <div<?= $current == 'coding-examples' ? ' class="current"' : '' ?>><a href="coding-examples">Coding Examples</a></div>
+            <div<?= $current == 'scs-scheme' ? ' class="current"' : '' ?>><a href="scs-scheme">SCS Scheme</a></div>
             <div class="contact-highlight"><a href=".#contact">Contact Me</a></div>
         </nav>

@@ -22,9 +22,7 @@
         text-decoration: none;
         display: flex;
         flex-direction: column;
-        :last-child {
-            margin-top: auto;
-        }
+        margin-bottom: rems(8px);
 
         img {
             width: 100%;
@@ -40,6 +38,13 @@
         p {
             margin: 0;
         }
+        p.view {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: rems(8px);
+        }
         .description {
             font-size: rems(16px);
             letter-spacing: rems(0.3px);
@@ -49,6 +54,15 @@
         &:hover {
             top: rems(-8px);
         }
+        height: 100%;
 
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a.gh {
+        color: $color-theme
     }
 }

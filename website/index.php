@@ -7,7 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $title = "My Portfolio";
-$description = "My project Portfolio";
+$description = "My Portfolio";
+$current=".";
 require 'parts/header.php';
 ?>
 <a id="nav-burger">
@@ -31,23 +32,32 @@ require 'parts/header.php';
     </header>
     <div class="projects container" id="portfolio">
         <!-- projects list -->
-        <a class="project" href="http://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
-            <img src="img/recreating-netmatters.webp" class="project-img" alt="preview of recreating netmatters' website project" />
-            <h2>Project One</h2>
-            <p class="description">Recreating Netmatters' Website</p>
-            <p>View Project <span class="icon-right"></span></p>
-        </a>
-        <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
-            <img src="img/js-arrays.webp" class="project-img" alt="preview of js arrays project" />
-            <h2>Project Two</h2>
-            <p class="description">JavaScript array<br>(dynamcially adding content to a webpage)</p>
-            <p>View Project <span class="icon-right"></span></p>
-        </a>
-        <a class="project" href="#" target="_blank">
-            <img src="img/blankproject.webp" class="project-img" alt="placeholder image" />
-            <h2>Project Three</h2>
-            <p>View Project <span class="icon-right"></span></p>
-        </a>
+        <div>
+            <a class="project" href="http://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
+                <img src="img/recreating-netmatters.webp" class="project-img" alt="preview of recreating netmatters' website project" />
+                <h2>Project One</h2>
+                <p class="description">Recreating Netmatters' Website</p>
+                <p class="view">View Project <span class="icon-right"></span></p>
+            </a>
+            <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/Netmatters-homepage" target="_blank">View source on Github</a>
+        </div>
+        <div>
+            <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
+                <img src="img/js-arrays.webp" class="project-img" alt="preview of js arrays project" />
+                <h2>Project Two</h2>
+                <p class="description">JavaScript array<br>(dynamcially adding content to a webpage)</p>
+                <p class="view">View Project <span class="icon-right"></span></p>
+            </a>
+            <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/js-array" target="_blank">View source on Github</a>
+        </div>
+        <div>
+            <a class="project" href="#" target="_blank">
+                <img src="img/blankproject.webp" class="project-img" alt="placeholder image" />
+                <h2>Project Three</h2>
+                <p class="view">View Project <span class="icon-right"></span></p>
+            </a>
+            <a class="gh" href="#" target="_blank">View source on Github</a>
+        </div>
     </div>
     <div class="contact container">
         <!-- contact form -->
@@ -59,12 +69,14 @@ require 'parts/header.php';
             <?php if($_GET["submit"] ?? "false" == "true"): ?>
                 <div id="formError" class="formSuccess">
                     <p>Form successfully submitted</p>
+                    <a></a>
                 </div>
             <?php elseif(!empty($form_errors)): ?>
                 <div id="formError">
                     <p>Unable to submit form:</p>
                         <?php foreach($form_errors as $error): ?>
                             <p><?= $error ?></p>
+                            <a></a>
                         <?php endforeach; ?>
                     <a></a>
                 </div>

@@ -32,6 +32,7 @@
         }
         textarea {
             font-family: inherit;
+            resize: vertical;
         }
         input, textarea {
             background-color: $color-input-background;
@@ -65,6 +66,7 @@
             background-color: $color-input-button-background;
             color: $color-input-button;
             width: 128px;
+            cursor: pointer;
         }
 
         .form-grid {
@@ -119,6 +121,9 @@
             &.formSuccess {
                 background-color: $color-success;
                 color: white;
+                a {
+                    color: $color-success;
+                }
             }
         }
     }

@@ -43,6 +43,7 @@
 }
 .icon-right {
     @include icon("\ea3c");
+    height: 20px;
 }
 .chevron-down {
     @include icon("\f078");

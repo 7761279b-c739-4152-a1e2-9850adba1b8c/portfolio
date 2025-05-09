@@ -1,6 +1,7 @@
 <?php 
 $title = "My Coding Examples";
 $description = "My Coding Examples";
+$current="coding-examples";
 require 'parts/header.php';
 ?>
 <div class="main">

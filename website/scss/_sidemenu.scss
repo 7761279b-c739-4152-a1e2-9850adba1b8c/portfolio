@@ -81,6 +81,7 @@ nav {
         font-size: rems(64px);
         height: 100px;
         border-bottom: rems(2px) solid $color-theme;
+        padding-top: rems(4px);
         
         a {
             padding: rems(8px);
@@ -90,6 +91,9 @@ nav {
     .contact-highlight {
         border-top: rems(2px) solid $color-theme;
         border-bottom: rems(2px) solid $color-theme;
+        font-weight: 600;
+    }
+    .current {
         font-weight: 600;
     }
 }

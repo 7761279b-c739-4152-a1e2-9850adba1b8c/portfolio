@@ -1,6 +1,7 @@
 <?php 
 $title = "SCS Scheme";
 $description = "The Scion Coalition Scheme is a web developer training program run by Netmatters";
+$current="scs-scheme";
 require 'parts/header.php';
 ?>
 <div class="main">
