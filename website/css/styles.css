@@ -118,13 +118,13 @@ pre {
 }
 
 /* line 65, ../../portfolio/website/scss/_layout.scss */
-p a, h1 a {
+p a, h2 a {
   color: #43b343;
   transition: .25s ease;
 }
 
 /* line 68, ../../portfolio/website/scss/_layout.scss */
-p a:hover, h1 a:hover {
+p a:hover, h2 a:hover {
   color: #7c7;
 }
 
@@ -224,7 +224,7 @@ nav div > a:hover {
 }
 
 /* line 79, ../../portfolio/website/scss/_sidemenu.scss */
-nav h1 {
+nav h2 {
   margin: 0;
   font-size: 4rem;
   height: 100px;
@@ -232,7 +232,7 @@ nav h1 {
 }
 
 /* line 85, ../../portfolio/website/scss/_sidemenu.scss */
-nav h1 a {
+nav h2 a {
   padding: 0.5rem;
 }
 

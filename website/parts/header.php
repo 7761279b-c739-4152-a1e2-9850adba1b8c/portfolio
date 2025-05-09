@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
     <body>
         <nav>
             <!-- navigation sidebar -->
-            <div><h1><a href=".">J</a></h1></div>
+            <div><h2><a href=".">J</a></h2></div>
             <div><a href="about-me">About Me</a></div>
             <div><a href=".#portfolio">My Portfolio</a></div>
             <div><a href="coding-examples">Coding Examples</a></div>

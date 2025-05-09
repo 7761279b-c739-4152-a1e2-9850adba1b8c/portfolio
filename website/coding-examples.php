@@ -32,7 +32,7 @@ window.addEventListener('scrollend', (event) => {
     }
 })
 window.addEventListener('scroll', () => {
-    scrollDirection = lastScrollY < window.scrollY;
+    scrollDirection = lastScrollY &lt; window.scrollY;
     lastScrollY = window.scrollY;
     if (lastScrollY == 0) {
         scrollDirection = true;

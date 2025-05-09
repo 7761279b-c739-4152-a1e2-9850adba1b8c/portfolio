@@ -17,7 +17,7 @@ require 'parts/header.php';
     <!-- main content -->
     <header>
         <!-- header image and name -->
-            <div class="header-overlay">
+        <div class="header-overlay">
             <h1 id="typing">My Name is Joshua Goodall</h1>
             <p>I'm a web developer</p>
             <div class="scroll-button">
@@ -81,7 +81,7 @@ require 'parts/header.php';
                 <label for="message" class="hidden">Message</label>
                 <textarea id="message" name="message" placeholder="Message*"></textarea>
             </div>
-            <button type="submit" id="submit" href="">Submit</button>
+            <button type="submit" id="submit">Submit</button>
             </form>
     </div>
     <footer>

@@ -62,7 +62,7 @@ pre {
     border-radius: rems(16px);
     padding: rems(16px);
 }
-p a, h1 a {
+p a, h2 a {
     color: darken($color-theme, 15%);
     transition: .25s ease;
     &:hover {
