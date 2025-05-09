@@ -1,32 +1,21 @@
 
-const email_regex = new RegExp(String.raw`^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$`)
+const email_regex = new RegExp(String.raw`^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$`);
+const phone_regex = new RegExp(String.raw`^((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$`);
 
 // invalid fields on last form check
 let invalids;
 let visible = false;
 
-function invalidFirstName() {
-    const element = document.getElementById('first-name');
+function invalidName() {
+    const element = document.getElementById('name');
     if (element.value != '') {
         element.className = 'valid'
         element.setCustomValidity("");
         invalids ^= (invalids & 0b1);
     } else {
         element.className = 'invalid'
-        element.setCustomValidity("First name is required");
+        element.setCustomValidity("N is required");
         invalids |= 0b1;
-    }
-}
-function invalidLastName() {
-    const element = document.getElementById('last-name');
-    if (element.value != '') {
-        element.className = 'valid'
-        element.setCustomValidity("");
-        invalids ^= (invalids &= 0b10);
-    } else {
-        element.className = 'invalid'
-        element.setCustomValidity("Last name is required");
-        invalids |= 0b10;
     }
 }
 function invalidEmail() {
@@ -48,16 +37,29 @@ function invalidEmail() {
         }
     }
 }
+function invalidPhone() {
+    const element = document.getElementById('phone');
+    if (element.value == '' || phone_regex.test(element.value)) {
+        element.className = 'valid'
+        element.setCustomValidity("");
+        invalids ^= (invalids & 0b110000);
+    } else {
+        element.className = 'invalid'
+        element.setCustomValidity("Invalid phone number");
+        invalids ^= (invalids & 0b110000);
+        invalids |= 0b100000;
+    }
+}
 function invalidSubject() {
     const element = document.getElementById('subject');
     if (element.value != '') {
         element.className = 'valid'
         element.setCustomValidity("");
-        invalids ^= (invalids & 0b10000);
+        invalids ^= (invalids & 0b1000000);
     } else {
         element.className = 'invalid'
         element.setCustomValidity("Subject must not be empty");
-        invalids |= 0b10000;
+        invalids |= 0b1000000;
     }
 }
 function invalidMessage() {
@@ -65,11 +67,11 @@ function invalidMessage() {
     if (element.value != '') {
         element.className = 'valid'
         element.setCustomValidity("");
-        invalids ^= (invalids & 0b100000);
+        invalids ^= (invalids & 0b10000000);
     } else {
         element.className = 'invalid'
         element.setCustomValidity("Message must not be empty");
-        invalids |= 0b100000;
+        invalids |= 0b10000000;
     }
 }
 
@@ -83,10 +85,10 @@ function updateErrorMessage() {
     element.id = "formError"
     let content = "<p>Unable to submit form:</p>";
     if (invalids & 0b1) {
-        content += "<p>First name is required</p>";
+        content += "<p>Name is required</p>";
     }
     if (invalids & 0b10) {
-        content += "<p>Last name is required</p>";
+        content += "<p></p>";
     }
     if (invalids & 0b100) {
         content += "<p>Email address is required</p>";
@@ -95,9 +97,15 @@ function updateErrorMessage() {
         content += "<p>Invalid email address</p>";
     }
     if (invalids & 0b10000) {
-        content += "<p>Subject is required</p>";
+        content += "<p>Phone number is required</p>";
     }
     if (invalids & 0b100000) {
+        content += "<p>Invalid phone number</p>";
+    }
+    if (invalids & 0b1000000) {
+        content += "<p>Subject is required</p>";
+    }
+    if (invalids & 0b10000000) {
         content += "<p>Message is required</p>";
     }
     element.innerHTML = `<div>${content}</div>`;
@@ -115,28 +123,28 @@ function hideErrorMessage() {
 }
 
 document.getElementById('submit').addEventListener('click', () => {
-    invalidFirstName();
-    invalidLastName();
+    invalidName();
     invalidEmail();
+    invalidPhone();
     invalidSubject();
     invalidMessage();
     updateErrorMessage();
 })
 
-document.getElementById('first-name').addEventListener('focusout', () => {
-    invalidFirstName();
-    if (visible) {
-        updateErrorMessage();
-    }
-});
-document.getElementById('last-name').addEventListener('focusout', () => {
-    invalidLastName();
+document.getElementById('name').addEventListener('focusout', () => {
+    invalidName();
     if (visible) {
         updateErrorMessage();
     }
 });
 document.getElementById('email').addEventListener('focusout', () => {
     invalidEmail();
+    if (visible) {
+        updateErrorMessage();
+    }
+});
+document.getElementById('phone').addEventListener('focusout', () => {
+    invalidPhone();
     if (visible) {
         updateErrorMessage();
     }

@@ -82,12 +82,12 @@ require 'parts/header.php';
                 </div>
             <?php endif; ?>
             <div class="form-grid" id="contact">
-                <label for="first-name" class="hidden">First Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="First Name*" />
-                <label for="last-name" class="hidden">Last Name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Last Name*" />
+                <label for="name" class="hidden">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name*" />
                 <label for="email" class="hidden">Email Address</label>
                 <input inputmode="email" id="email" name="email" placeholder="Email Address*" />
+                <label for="phone" class="hidden">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone" />
                 <label for="subject" class="hidden">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="Subject*" />
                 <label for="message" class="hidden">Message</label>

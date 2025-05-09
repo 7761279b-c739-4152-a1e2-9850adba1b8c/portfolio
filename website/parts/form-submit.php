@@ -4,11 +4,8 @@ const email_regex = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+
 const phone_regex = '/^((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))$/';
 
 
-if (strlen($_POST['first-name']) < 1) {
-    $form_errors[] = 'First name is required';
-}
-if (strlen($_POST['last-name']) < 1) {
-    $form_errors[] = 'Last name is required';
+if (strlen($_POST['name']) < 1) {
+    $form_errors[] = 'Name is required';
 }
 
 if (strlen($_POST['email']) < 1) {
@@ -16,7 +13,6 @@ if (strlen($_POST['email']) < 1) {
 } elseif (!preg_match(email_regex, $_POST['email'])) {
     $form_errors[] = 'Invalid email address';
 }
-// optional phone number in case I add this to the form
 if (isset($_POST['phone']) && strlen($_POST['phone']) > 0 && !preg_match(phone_regex, $_POST['phone'])) {
     $form_errors[] = 'Invalid phone number';
 }
@@ -38,9 +34,9 @@ require_once realpath(__DIR__ . "/../vendor/autoload.php");
 require 'parts/database.php';
 
 $db = new Database();
-$db->query('insert into contact(first_name, last_name, email, phone, subject, message) values(:first_name, :last_name, :email, :phone, :subject, :message)', [
-    'first_name' => $_POST['first-name'],
-    'last_name' => $_POST['last-name'],
+$db->query('insert into contact(name, company, email, phone, subject, message) values(:name, :company, :email, :phone, :subject, :message)', [
+    'name' => $_POST['name'],
+    'company' => $_POST['company'] ?? '',
     'email' => $_POST['email'],
     'phone' => $_POST['phone'] ?? '',
     'subject' => $_POST['subject'],

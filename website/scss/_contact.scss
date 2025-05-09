@@ -73,21 +73,21 @@
             display: grid;
             gap: rems(14px);
             grid-template-columns: 1fr;
-            grid-template-areas: 'first-name' 'last-name' 'email' 'subject' 'message';
+            grid-template-areas: 'name' 'email' 'phone' 'subject' 'message';
             margin-bottom: rems(14px);
             @include mq(medium) {
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: 'first-name last-name' 'email email' 'subject subject' 'message message';
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: 'name name' 'email phone' 'subject subject' 'message message';
             }
 
-            #first-name {
-                grid-area: first-name;
-            }
-            #last-name {
-                grid-area: last-name;
+            #name {
+                grid-area: name;
             }
             #email {
                 grid-area: email;
+            }
+            #phone {
+                grid-area: phone;
             }
             #subject {
                 grid-area: subject;
