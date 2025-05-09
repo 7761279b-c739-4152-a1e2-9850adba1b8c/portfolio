@@ -62,8 +62,15 @@ $mail->Port = $_ENV['MAIL_PORT'];
 $mail->addAddress($_ENV['MAIL_TARGET']);
 $mail->Body = 'New form submission';
 
-if (!$mail->send()) {
-    // mail failed to send (do I put this as an error? Since the form submitted to database ok)
+try {
+    if (!$mail->send()) {
+        throw new Exception('Mail didn\'t send correctly');
+    }
+} catch (Exception $e) {
+    /* mail failed to send 
+     * do I put this as an error? 
+     * Since the form submitted to database ok, I will display success message so submissions don't get repeated.
+     */
 }
 
 
