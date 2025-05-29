@@ -50,6 +50,19 @@ element.innerHTML = `&lt;h3&gt;Images for: &lt;code&gt;${name}&lt;/code&gt;.&lt;
 assigned.innerHTML = '';
 assigned.appendChild(element);
 </pre>
+        <h3>Example of controller index in PHP/Laravel</h3>
+        <p>from laravel example<br></p>
+<pre>
+public function index()
+{
+    if (Auth::guest()) {return redirect('/login');}
+
+    $companies = Company::latest()->simplePaginate(10);
+    return view('company.index', [
+        'companies' => $companies
+    ]);
+}
+</pre>
     </div>
 </div>
 <?php require 'parts/footer.php'; ?>

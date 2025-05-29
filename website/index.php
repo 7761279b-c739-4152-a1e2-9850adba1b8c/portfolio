@@ -51,12 +51,13 @@ require 'parts/header.php';
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/js-array" target="_blank">View source on Github</a>
         </div>
         <div>
-            <a class="project" href="#" target="_blank">
-                <img src="img/blankproject.webp" class="project-img" alt="placeholder image" />
+            <a class="project" href="http://laravel.joshua-goodall.netmatters-scs.co.uk" target="_blank">
+                <img src="img/laravel.webp" class="project-img" alt="preview of laravel example" />
                 <h2>Project Three</h2>
+                <p class="description">Laravel example<br>(MVC and database)
                 <p class="view">View Project <span class="icon-right"></span></p>
             </a>
-            <a class="gh" href="#" target="_blank">View source on Github</a>
+            <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/Laravel-assessment" target="_blank">View source on Github</a>
         </div>
     </div>
     <div class="contact container">
