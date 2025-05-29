@@ -23,6 +23,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: rems(8px);
+        align-items: center;
 
         img {
             width: 100%;
@@ -32,7 +33,7 @@
 
         h2 {
             text-align: left;
-            font-size: rems(32px);
+            font-size: rems(28px);
             margin: rems(8px) 0;
         }
         p {
@@ -46,9 +47,10 @@
             gap: rems(8px);
         }
         .description {
-            font-size: rems(16px);
+            font-size: rems(18px);
             letter-spacing: rems(0.3px);
             margin-bottom: rems(4px);
+            text-align: center;
         }
 
         &:hover {
@@ -63,6 +65,7 @@
     }
 
     a.gh {
+        text-align: center;
         color: darken($color-theme, 15%);
         transition: .25s ease;
         &:hover {

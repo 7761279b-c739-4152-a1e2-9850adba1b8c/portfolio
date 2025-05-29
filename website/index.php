@@ -35,8 +35,8 @@ require 'parts/header.php';
         <div>
             <a class="project" href="http://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
                 <img src="img/recreating-netmatters.webp" class="project-img" alt="preview of recreating netmatters' website project" />
-                <h2>Project One</h2>
-                <p class="description">Recreating Netmatters' Website</p>
+                <h2>Recreating Netmatters' Website</h2>
+                <p class="description"></p>
                 <p class="view">View Project <span class="icon-right"></span></p>
             </a>
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/Netmatters-homepage" target="_blank">View source on Github</a>
@@ -44,8 +44,8 @@ require 'parts/header.php';
         <div>
             <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
                 <img src="img/js-arrays.webp" class="project-img" alt="preview of js arrays project" />
-                <h2>Project Two</h2>
-                <p class="description">JavaScript array<br>(dynamcially adding content to a webpage)</p>
+                <h2>JavaScript array</h2>
+                <p class="description">(dynamically adding content to a webpage)</p>
                 <p class="view">View Project <span class="icon-right"></span></p>
             </a>
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/js-array" target="_blank">View source on Github</a>
@@ -53,8 +53,8 @@ require 'parts/header.php';
         <div>
             <a class="project" href="http://laravel.joshua-goodall.netmatters-scs.co.uk" target="_blank">
                 <img src="img/laravel.webp" class="project-img" alt="preview of laravel example" />
-                <h2>Project Three</h2>
-                <p class="description">Laravel example<br>(MVC and database)
+                <h2>Laravel example</h2>
+                <p class="description">(MVC and database)</p>
                 <p class="view">View Project <span class="icon-right"></span></p>
             </a>
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/Laravel-assessment" target="_blank">View source on Github</a>
