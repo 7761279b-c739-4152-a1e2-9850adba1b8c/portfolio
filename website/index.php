@@ -33,7 +33,7 @@ require 'parts/header.php';
     <div class="projects container" id="portfolio">
         <!-- projects list -->
         <div>
-            <a class="project" href="http://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
+            <a class="project" href="https://netmatters.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
                 <img src="img/recreating-netmatters.webp" class="project-img" alt="preview of recreating netmatters' website project" />
                 <h2>Recreating Netmatters' Website</h2>
                 <p class="description"></p>
@@ -42,7 +42,7 @@ require 'parts/header.php';
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/Netmatters-homepage" target="_blank">View source on Github</a>
         </div>
         <div>
-            <a class="project" href="http://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
+            <a class="project" href="https://js-array.joshua-goodall.netmatters-scs.co.uk/" target="_blank">
                 <img src="img/js-arrays.webp" class="project-img" alt="preview of js arrays project" />
                 <h2>JavaScript array</h2>
                 <p class="description">(dynamically adding content to a webpage)</p>
@@ -51,7 +51,7 @@ require 'parts/header.php';
             <a class="gh" href="https://github.com/7761279b-c739-4152-a1e2-9850adba1b8c/js-array" target="_blank">View source on Github</a>
         </div>
         <div>
-            <a class="project" href="http://laravel.joshua-goodall.netmatters-scs.co.uk" target="_blank">
+            <a class="project" href="https://laravel.joshua-goodall.netmatters-scs.co.uk" target="_blank">
                 <img src="img/laravel.webp" class="project-img" alt="preview of laravel example" />
                 <h2>Laravel example</h2>
                 <p class="description">(MVC and database)</p>
